@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy and Disclaimer Statement</title>
+    <style>
+    body {font-family: Arial, sans-serif;padding: 20px;line-height: 1.6;}
+    footer {background-color: #eee;padding: 20px;text-align: center;margin-top: 20px;}
+    .date-time {margin-left: auto; font-family: Arial, sans-serif;font-size: medium;}
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+          <td class="side-menu" rowspan="3">
+            
+                <div><a href="home.html">Home</a></div>
+                <div><a href="browse.html">Browse Available Pets</a></div>
+                <div><a href="pets.html">Pets Page</a></div>
+                <div><a href="findpet.html">Find a dog/cat</a></div>
+                <div><a href="dogcare.html">Dog Care</a></div>
+                <div><a href="catcare.html">Cat Care</a></div>
+                <div><a href="petgive.html">Have a Pet to Giveaway</a></div>
+                <div><a href="contact.html">Contact Us</a></div>
+           
+          </td>
+          <td class="header">
+            <div style="display: flex; align-items: center;">
+            <a href="home.html">
+                <img style="width: 150px; height:150px; border-radius:50%" src="logo.png" alt="logo"> 
+            </a>
+            <h1 style=" font-family:cursive; color: palevioletred;"> Paws and Whiskers Haven</h1>
+            <div id="dateTime" class="date-time"></div>
+
+        </div> 
+        </td>
+        </tr>
+        <tr>
+          <td class="content-area">
+            <h1>Privacy and Disclaimer Statement</h1>
+            <h2>Privacy Policy</h2>
+            <p>We at Paws and Whiskers Haven are committed to protecting your privacy. This policy outlines how we handle the information we collect when you visit our site and interact with us.</p>
+            <ul>
+                <li><strong>Personal Information:</strong> We only collect personal information that you choose to give us (e.g., through contact forms or email subscriptions).</li>
+                <li><strong>Usage Data:</strong> We may also collect information on how the Service is accessed and used. This usage data may include information such as your computer's Internet Protocol address (e.g., IP address), browser type, browser version, our Service pages that you visit, the time and date of your visit, the time spent on those pages, and other diagnostic data.</li>
+                <li><strong>Cookies:</strong> We use cookies to enhance your experience on our website. You have the option to refuse these cookies and know when a cookie is being sent to your computer.</li>
+                <li><strong>Use of Data:</strong> The data we collect is used to provide and improve the Service. We do not share or sell your information.</li>
+            </ul>
+            
+            <h2>Disclaimer</h2>
+            <p>The information provided on the Paws and Whiskers Haven website is for general information purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.</p>
+            
+          </td>
+        </tr>
+        <tr>
+          <td class="footer" colspan="2">
+            <footer id="footer" style="background-color: #eee; padding: 20px; text-align: center;">
+              <p>Copyright &copy; 2024 by Leila Djeffal. All rights reserved.</p>
+              <a href="privacy.html">Privacy/Disclaimer Statement</a>
+          </footer>
+          </td>
+        </tr>
+      </table>
+
+      <script>
+        function updateDateTime() {
+            const now = new Date();
+            const dateTimeStr = now.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true }) + " on " + now.toLocaleDateString();
+            document.getElementById("dateTime").innerText = dateTimeStr;
+        }
+
+        setInterval(updateDateTime, 1000);
+        updateDateTime();
+    </script>
+</body>
+</html>

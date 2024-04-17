@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<style>
+    table { width: 100%;height: 100vh }
+    th, td { border: 1px solid black }
+    th { background-color: #f2f2f2; }
+    .header { height: 50px; } 
+    .footer { height: 50px; } 
+    .side-menu { width: 12%; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: medium;} 
+    .content-area { width: 80%; vertical-align: top; }
+    img {float: right; margin: 0 0 20px 20px;width: 300px;height: 300px;}
+    .content {text-align: center !important;}
+    .date-time {margin-left: auto; font-family: Arial, sans-serif;font-size: medium;}
+</style>
+
+<body> 
+        <table>
+            <tr>
+              <td class="side-menu" rowspan="3">
+                
+                    <div><a href="home.html">Home</a></div>
+                    <div><a href="browse.html">Browse Available Pets</a></div>
+                    <div><a href="pets.html">Pets Page</a></div>
+                    <div><a href="findpet.html">Find a dog/cat</a></div>
+                    <div><a href="dogcare.html">Dog Care</a></div>
+                    <div><a href="catcare.html">Cat Care</a></div>
+                    <div><a href="petgive.html">Have a Pet to Giveaway</a></div>
+                    <div><a href="contact.html">Contact Us</a></div>
+               
+              </td>
+              <td class="header">
+                <div style="display: flex; align-items: center;">
+                <a href="home.html">
+                    <img style="width: 150px; height:150px; border-radius:50%" src="logo.png" alt="logo"> 
+                </a>
+                <h1 style=" font-family:cursive; color: palevioletred;"> Paws and Whiskers Haven</h1>
+                <div id="dateTime" class="date-time"></div>
+
+            </div> 
+            </td>
+            </tr>
+            <tr>
+              <td class="content-area">
+                <h1>Cat Care Instructions</h1>
+                <img src="cat.jpg" alt="Cat Care">
+                <div class="content">
+                    <h2>How to Care for Your Cat</h2>
+                    <p>
+                        Cats are independent animals, but they still require plenty of care and attention. Here are some basics to consider:
+                    </p>
+                    <ul>
+                        <li>Provide a balanced diet with proper cat food.</li>
+                        <li>Keep the litter box clean and in a quiet area.</li>
+                        <li>Regular vet check-ups for vaccinations and health assessments.</li>
+                        <li>Provide scratching posts and toys for exercise and entertainment.</li>
+                        <li>Brush your cat regularly to reduce shedding and hairballs.</li>
+                        <li>Create a comfortable and safe space for them to retreat.</li>
+                    </ul>
+                    <p>
+                        Spend time each day playing with your cat to strengthen your bond and provide mental stimulation.
+                    </p>
+                    <p>Consult a vet for more comprehensive care tips tailored to your cat's needs.</p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="footer" colspan="2">
+                <footer id="footer" style="background-color: #eee; padding: 20px; text-align: center;">
+                  <p>Copyright &copy; 2024 by Leila Djeffal. All rights reserved.</p>
+                  <a href="privacy.html">Privacy/Disclaimer Statement</a>
+              </footer>
+              </td>
+            </tr>
+          </table>
+
+          <script>
+            function updateDateTime() {
+                const now = new Date();
+                const dateTimeStr = now.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', second: 'numeric', hour12: true }) + " on " + now.toLocaleDateString();
+                document.getElementById("dateTime").innerText = dateTimeStr;
+            }
+    
+            setInterval(updateDateTime, 1000);
+            updateDateTime();
+        </script>
+</body>
+</html>
